@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -15,11 +16,35 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
+            'id' => null,
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'password' => bcrypt('password'), // password
             'remember_token' => Str::random(10),
+            'code' => function($attributes) {
+                $names = explode(' ', $attributes['name']);
+                $name = end($names);
+                for($i=0 ; $i< count($names)-1; $i++) {
+                    $name.= substr($names[$i],1);
+                }
+
+                return $name;
+            },
+            'start_date' => Carbon::parse('- '.rand(60, 1000). ' days')->format('Y-m-d'),
+            'offical_start_date' => function($attributes) {
+                return Carbon::parse($attributes['start_date'])->addMonths(2)->format('Y-m-d H:i:s');
+            },
+            'dependent_person' => 0,
+            'gender' => rand(1,2),
+            'contract' => 1,
+            'birthday' => Carbon::parse('-'.rand(7300, 21900). ' days')->format('Y-m-d'),
+            'phone' => '',
+            'status' => 1,
+            'position'=> 1,
+            'user_id' => 1,
+            'avatar' => null,
+            'role' => 1
         ];
     }
 
