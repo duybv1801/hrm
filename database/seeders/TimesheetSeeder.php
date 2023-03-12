@@ -19,8 +19,6 @@ class TimesheetSeeder extends Seeder
      */
     public function run()
     {
-        
-       
         $start = $this->command->ask(
             'Ngày bắt đầu(Y-m-d):',
             Carbon::parse('-30 days')->format('Y-m-d')
@@ -40,7 +38,7 @@ class TimesheetSeeder extends Seeder
         }
 
         if(empty($userId)){
-            $users = User::where('id', '<>', 1)->get()->pluck('id');
+            $users = User::where('id', '<>', 1)->get()->pluck('id')->toArray();
         } else {
             $users = $userId;
         }
@@ -48,16 +46,18 @@ class TimesheetSeeder extends Seeder
         $this->startTime = Carbon::parse('07:00')->timestamp;
         $this->endTime = Carbon::parse('09:00')->timestamp;
         while($startDate->lte($endDate)) {
-            $recordDate = $startDate->format('Y-m-d');
-            if(is_array($users)) {
-                foreach($users as $userId) {
-                    die($userId);
+            if(!$startDate->isWeekend()) {
+                $recordDate = $startDate->format('Y-m-d');
+                if(is_array($users)) {
+                    foreach($users as $userId) {
+                        $this->addRecord($recordDate, $userId);
+                    }
+                } else {
                     $this->addRecord($recordDate, $userId);
                 }
-            } else {
-                $this->addRecord($recordDate, $userId);
-                $startDate->addDay();
             }
+
+            $startDate->addDay();
         }
     }
 
@@ -75,7 +75,7 @@ class TimesheetSeeder extends Seeder
             $out = $time->toTimeString();
             $working_hours = 8;
             if($status ==2) {
-                $working_hours = calculator_working_minutes($in, $out);;
+                $working_hours = calculator_working_hours($in, $out);
             }
             Timesheet::factory()->create([
                 'user_id' => $userId,

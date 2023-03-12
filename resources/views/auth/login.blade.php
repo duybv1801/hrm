@@ -50,11 +50,11 @@
                 @csrf
 
                 <div class="input-group mb-3">
-                    <input type="email"
-                           name="email"
-                           value="{{ old('email') }}"
-                           placeholder="@lang('auth.email')"
-                           class="form-control @error('email') is-invalid @enderror">
+                    <input type="text"
+                           name="code"
+                           value="{{ old('code') }}"
+                           placeholder="@lang('auth.code')"
+                           class="form-control @error('code') is-invalid @enderror">
                     <div class="input-group-append">
                         <div class="input-group-text"><span class="fas fa-envelope"></span></div>
                     </div>

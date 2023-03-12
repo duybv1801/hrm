@@ -1,4 +1,4 @@
 
-<li class="{{ Request::is('users*') ? 'active' : '' }}">
-    <a href="{!! route('users.index') !!}"><i class="fa fa-user"></i><span>Users</span></a>
+<li class="nav-item {{ Request::is('doadboard*') ? 'active' : '' }}">
+    <a class="nav-link" href="{!! route('home') !!}">Trang chủ</a>
 </li>

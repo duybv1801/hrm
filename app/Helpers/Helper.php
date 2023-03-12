@@ -2,11 +2,11 @@
 use App\Models\Setting;
 use Carbon\Carbon;
 
-if (! function_exists('calculator_working_minutes')) {
+if (! function_exists('calculator_working_hours')) {
     /**
      * function calculator working hours
      */
-    function calculator_working_minutes($check_in, $check_out)
+    function calculator_working_hours($check_in, $check_out)
     {
         $in = Carbon::parse($check_in);
         $out = Carbon::parse($check_out);
@@ -35,6 +35,7 @@ if (! function_exists('calculator_working_minutes')) {
         $recordTime = min($totalMinute, $maxTimeWorkingDay);
         $block =max(1, (int) $setting['minute_block']);
 
-        return floor($recordTime/$block)*$block;
+        $minutes = floor($recordTime/$block)*$block;
+        return $minutes/60;
     }
 }

@@ -24,3 +24,5 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::resource('users', UserController::class)->middleware('auth');
 
+Route::resource('in_out_forgets', InOutForgetController::class)->middleware('auth');
+Route::resource('leaves', LeaveController::class)->middleware('auth');
