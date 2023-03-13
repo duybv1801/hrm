@@ -15,25 +15,33 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    @include('flash::message')
-                    <h5 class="text-danger" style="margin-bottom: 20px">
-                        <span style="margin-right: 30px">Số phép dư: {{Auth::user()->leave_hours_left}}h</span>Phép theo tháng còn:  {{Auth::user()->leave_hours_left_in_month}}h
-                    </h5>
-                    {!! Form::open(['route' => ['home'], 'method' => 'get']) !!}
-                    <div class="form-group row">
-                        {!! Form::label('start_date', 'Ngày bắt đầu', ['class' => 'col-lg-2']) !!}
-                        {!! Form::text('start_date', $start_date, ['class' => 'form-control col-lg-4']) !!}
-                    </div>
-                    <div class="form-group row">
-                        {!! Form::label('end_date', 'Ngày kết thúc', ['class' => 'col-lg-2']) !!}
-                        {!! Form::text('end_date', $end_date, ['class' => 'form-control col-lg-4']) !!}
-                    </div>
-                    <div class="form-group row">
-                        <div class="offset-2">
-                            {!! Form::submit('Tìm kiếm') !!}
+                    <div class="row">
+                        <div class="col-lg-6">
+                            @include('flash::message')
+                            <h5 class="text-danger" style="margin-bottom: 20px">
+                                <span style="margin-right: 30px">Số phép dư: {{Auth::user()->leave_hours_left}}h</span>Phép theo tháng còn:  {{Auth::user()->leave_hours_left_in_month}}h
+                            </h5>
+                            {!! Form::open(['route' => ['home'], 'method' => 'get']) !!}
+                            <div class="form-group row">
+                                {!! Form::label('start_date', 'Ngày bắt đầu', ['class' => 'col-lg-2']) !!}
+                                {!! Form::text('start_date', $start_date, ['class' => 'form-control col-lg-10']) !!}
+                            </div>
+                            <div class="form-group row">
+                                {!! Form::label('end_date', 'Ngày kết thúc', ['class' => 'col-lg-2']) !!}
+                                {!! Form::text('end_date', $end_date, ['class' => 'form-control col-lg-10']) !!}
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-2">
+                                    {!! Form::submit('Tìm kiếm') !!}
+                                </div>
+                            </div>
+                            {!! Form::close() !!}
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- check in out time -->
                         </div>
                     </div>
-                    {!! Form::close() !!}
+
                 </div>
             </div>
             <div class="card card-warning">
@@ -78,10 +86,10 @@
                                     <td>{!! $timesheet->leave_hours !!}</td>
                                     <td>
                                         @if($timesheet->status == 2)
-                                            <a href="{{route('in_out_forgets.create')}}" class="btn btn-primary btn-sm">
+                                            <a href="{{route('in_out_forgets.create',['date' => $timesheet->record_date])}}" class="btn btn-primary btn-sm">
                                                 <i class="fas fa-bell"></i> In out
                                             </a>
-                                            <a href="{{route('leaves.create')}}" class="btn btn-danger btn-sm">
+                                            <a href="{{route('leaves.create', ['date' => $timesheet->record_date])}}" class="btn btn-danger btn-sm">
                                                 <i class="fas fa-sharp fa-solid fa-house-user"></i> Leave
                                             </a>
                                         @endif

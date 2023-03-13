@@ -41,8 +41,6 @@ class Leave extends Model
      */
     protected $casts = [
         'user_id' => 'integer',
-        'from_datetime' => 'datetime',
-        'to_datetime' => 'datetime'
     ];
 
     /**

@@ -39,10 +39,14 @@ class UserFactory extends Factory
             'gender' => rand(1,2),
             'contract' => 1,
             'birthday' => Carbon::parse('-'.rand(7300, 21900). ' days')->format('Y-m-d'),
+            'leave_hours_left' => rand(1, 32),
+            'leave_hours_left_in_month' => function($attributes) {
+                return $attributes['gender'] == 2 ? 4 : 0;
+            },
             'phone' => '',
             'status' => 1,
             'position'=> 1,
-            'user_id' => 1,
+            'user_id' => null,
             'avatar' => null,
             'role' => 1
         ];

@@ -37,7 +37,7 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $startDate = $request->get('start_date', Carbon::now()->startOfMonth()->format('Y-m-d'));
-        $endDate = $request->get('end_date', Carbon::now()->endOfMonth()->format('Y-m-d'));
+        $endDate = $request->get('end_date', Carbon::now()->format('Y-m-d'));
         $conditions = [
             'start_date' => $startDate,
             'end_date' => $endDate,
