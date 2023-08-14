@@ -7,7 +7,7 @@
            <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{!! route('users.create') !!}">Add New</a>
         </h1>
     </section>
-    <div class="content">
+    <div class="content"> 
         <div class="clearfix"></div>
 
         @include('flash::message')
