@@ -26,12 +26,12 @@
                                     <td>{{ Form::label('phone', trans('staff.phone')) }} <p>{!! $user->phone !!}</p>
                                     </td>
                                     <td>
-                                        {!! Form::open(['route' => ['managerStaff.destroy', $user->id], 'method' => 'delete']) !!}
+                                        {!! Form::open(['route' => ['manager_staff.destroy', $user->id], 'method' => 'delete']) !!}
                                         <div class="btn-group">
-                                            <a href="{!! route('managerStaff.edit', [$user->id]) !!}" class="btn btn-primary btn-sm">
-                                                <i class="glyphicon glyphicon-edit"></i>Sửa
+                                            <a href="{!! route('manager_staff.edit', [$user->id]) !!}" class="btn btn-primary btn-sm">
+                                                <i class="glyphicon glyphicon-edit"></i>{{ trans('auth.edit') }}
                                             </a>
-                                            {!! Form::button('<i class="glyphicon glyphicon-trash"></i> Xóa', [
+                                            {!! Form::button('<i class="glyphicon glyphicon-trash"></i>'. trans('auth.delete'), [
                                                 'type' => 'submit', 
                                                 'class' => 'btn btn-danger btn-sm',
                                                 'onclick' => "return confirm('Bạn có chắc chắn muốn xóa?')",

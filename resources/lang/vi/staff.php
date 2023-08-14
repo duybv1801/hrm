@@ -12,6 +12,7 @@
 */
 
 return [  
+    'staff_edit' => 'Sửa thông tin nhân viên',
     'email' => 'Email',
     'name' => 'Tên',
     'code' => 'Mã nhân viên',

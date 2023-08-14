@@ -12,33 +12,18 @@
 */
 
 return [
-    'failed'   => 'Thông tin tài khoản không tìm thấy trong hệ thống.',
-    'password' => 'Mật khẩu không đúng.',
-    'throttle' => 'Vượt quá số lần đăng nhập cho phép. Vui lòng thử lại sau :seconds giây.',
-    
-    'email' => 'Email',
-    'name' => 'Tên',
-    'code' => 'Mã nhân viên',
-    'start_date' => 'Ngày bắt đầu',
-    'official_start_date' => 'Ngày bắt đầu tại cơ quan',
-    'gender' => 'Giới tính',
-    'dependent_person' => 'Người phụ thuộc',
-    'contract' => 'Hợp đồng',
-    'birthday' => 'Sinh nhật',
-    'phone' => 'SĐT',
-    'status' => 'Trạng thái',
-    'position' => 'Chức vụ',
-    'user_id' => 'Người tạo',
-    'avatar' => 'Ảnh đại diện',
-    'role' => 'Vai trò',
-    'leave_hours_left' => 'Thời gian nghỉ không đúng qui định',
-    'leave_hours_left_in_month' => 'Thời gian nghỉ không đúng qui định/tháng',
-
-    'remember_me' => 'Ghi nhớ',
-    'sign_in' => 'Đăng nhập',
-    'login' => [
-        'forgot_password' => 'Quên mật khẩu',
-        'register_membership' => 'Đăng ký thành viên',
-        'title' => 'Đăng nhập'
-    ]
+    'cancel' => 'Hủy',
+    'save' => 'Lưu',
+    'create' => 'Thêm',
+    'edit' => 'Sửa',
+    'delete' => 'Xóa',
+    'search' => 'Tìm kiếm',
+    'nal'   => 'https://nal.vn/vi/',
+    'home'  => 'Trang chủ',
+    'nal_lg' => 'NAL-COMPANY',
+    'manager_staff' => 'Quản lí nhân viên',
+    'account_manager' => 'Tài khoản',
+    'account_show'  => 'Thông tin tài khoản',
+    'account_edit' => 'Sửa thông tin tài khoản',
+    'password' => 'Nhập mật khẩu'
 ];

@@ -12,6 +12,17 @@
 */
 
 return [
+    'failed'   => 'Thông tin tài khoản không tìm thấy trong hệ thống.',
+    'password' => 'Mật khẩu không đúng.',
+    'throttle' => 'Vượt quá số lần đăng nhập cho phép. Vui lòng thử lại sau :seconds giây.',
+    'remember_me' => 'Ghi nhớ',
+    'sign_out' => 'Đăng xuất',
+    'sign_in' => 'Đăng nhập',
+    'login' => [
+        'forgot_password' => 'Quên mật khẩu',
+        'register_membership' => 'Đăng ký thành viên',
+        'title' => 'Đăng nhập'
+    ],
     'accepted'             => 'Trường :attribute phải được chấp nhận.',
     'accepted_if'          => 'Trường :attribute phải được chấp nhận khi :other là :value.',
     'active_url'           => 'Trường :attribute không phải là một URL hợp lệ.',

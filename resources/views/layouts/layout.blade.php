@@ -48,17 +48,11 @@
                                                             alt="" width="260"
                                                             style="height:auto;display:block;" />
                                                     </p>
-                                                    <p
-                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                                                        tempus adipiscing felis, sit amet blandit ipsum volutpat sed.
-                                                        Morbi porttitor, eget accumsan dictum, est nisi libero ultricies
-                                                        ipsum, in posuere mauris neque at erat.</p>
+
                                                     <p
                                                         style="margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
                                                         <a href="http://www.example.com"
-                                                            style="color:#ee4c50;text-decoration:underline;">Blandit
-                                                            ipsum volutpat sed</a>
+                                                            style="color:#ee4c50;text-decoration:underline;"></a>
                                                     </p>
                                                 </td>
                                                 <td style="width:20px;padding:0;font-size:0;line-height:0;">&nbsp;</td>
@@ -69,17 +63,11 @@
                                                             alt="" width="260"
                                                             style="height:auto;display:block;" />
                                                     </p>
-                                                    <p
-                                                        style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
-                                                        Morbi porttitor, eget est accumsan dictum, nisi libero ultricies
-                                                        ipsum, in posuere mauris neque at erat. Lorem ipsum dolor sit
-                                                        amet, consectetur adipiscing elit. In tempus adipiscing felis,
-                                                        sit amet blandit ipsum volutpat sed.</p>
+
                                                     <p
                                                         style="margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
                                                         <a href="http://www.example.com"
-                                                            style="color:#ee4c50;text-decoration:underline;">In tempus
-                                                            felis blandit</a>
+                                                            style="color:#ee4c50;text-decoration:underline;"></a>
                                                     </p>
                                                 </td>
                                             </tr>

@@ -33,25 +33,6 @@ class ManagerStaffController extends AppBaseController
     }
    
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $user = $this->userRepository->find($id);
-
-        if (empty($user)) {
-            Flash::error('Staff not found');
-
-            return redirect(route('manager_staff.index'));
-        }
-
-        return view('manager_staff.show')->with('user', $user);
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -112,13 +93,13 @@ class ManagerStaffController extends AppBaseController
         if (empty($user)) {
             Flash::error('Staff not found');
 
-            return redirect(route('.index'));
+            return redirect(route('manager_staff.index'));
         }
 
         $this->userRepository->delete($id);
 
         Flash::success('Staff deleted successfully.');
 
-        return redirect(route('users.index'));
+        return redirect(route('manager_staff.index'));
     }
 }

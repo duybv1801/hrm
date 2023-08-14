@@ -1,11 +1,9 @@
 <?php
-
-use App\Http\Controllers\Auth\VerificationController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ManagerStaffController;
-use App\Http\Controllers\InOutForgetController;
-use App\Http\Controllers\LeaveController;
+use App\Http\Controllers\HomeController;
 
 
 /*
@@ -25,14 +23,12 @@ use App\Http\Controllers\LeaveController;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//home
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-
-
+//user
 Route::resource('users', UserController::class)->middleware('auth');
-Route::resource('managerStaff',ManagerStaffController::class)->middleware('auth');
-Route::resource('showVerifyEmailForm', VerificationController::class)->middleware('auth');
 
-Route::resource('in_out_forgets', InOutForgetController::class)->middleware('auth');
-Route::resource('leaves', LeaveController::class)->middleware('auth');
-Route::get('/verify', [App\Http\Controllers\Auth\VerificationController::class, 'showVerifyEmailForm'])->name('auth.verify');
+//manager staff
+Route::resource('manager_staff',ManagerStaffController::class)->middleware('auth');
+

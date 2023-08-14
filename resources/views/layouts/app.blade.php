@@ -105,7 +105,7 @@
                         <!-- item-->
                         <a href="" class="link" data-toggle="tooltip"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                            title="Log" data-original-title="Logout">Logout<i class="fas fa-sign-out-alt"></i></a>
+                            title="Log" data-original-title="Logout"><i class="fas fa-sign-out-alt"></i>{{ trans('validation.sign_out') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
@@ -118,12 +118,11 @@
             <div class="page-breadcrumb">
                 <div class="row align-items-center">
                     <div class="col-md-6 col-8 align-self-center">
-                        <h3 class="page-title mb-0 p-0">NAL-COMPANY</h3>
+                        <h3 class="page-title mb-0 p-0">{{ trans('auth.nal_lg') }}</h3>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">NAL</li>
+                                    <li class="breadcrumb-item"><a href="#">{{ trans('auth.home') }}</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -136,7 +135,7 @@
                     @yield('content')
                 </div>
             </div>
-            <footer class="footer"> PJ - 2023<a href="#">
+            <footer class="footer"> {{ trans('auth.nal') }}<a href="#">
                 </a>
             </footer>
         </div>

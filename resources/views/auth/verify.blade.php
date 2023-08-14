@@ -5,17 +5,16 @@
         <div class="row justify-content-center">
             <div class="col-md-7" style="margin-top: 2%">
                 <div class="box">
-                    <h3 class="box-title" style="padding: 2%">Verify Your Email Address</h3>
+                    <h3 class="box-title" style="padding: 2%">{{ trans('mail.mail_alert') }}</h3>
 
                     <div class="box-body">
                         @if (session('resent'))
                             <div class="alert alert-success" role="alert">
-                                A fresh verification link has been sent to your email address
+                                {{ trans('mail.mail_alert1') }}
                             </div>
                         @endif
                         <p>
-                            Before proceeding, please check your email for a verification link.If you did not receive
-                            the email,
+                            {{ trans('mail.mail_alert2') }}
                         </p>
                         {{-- <a href="{{ route('verification.resend') }}">click here to request another'</a>. --}}
                     </div>

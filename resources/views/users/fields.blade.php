@@ -24,6 +24,7 @@
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('users.index') !!}" class="btn btn-default">Cancel</a>
+    {!! Form::submit(trans('auth.save') , ['class' => 'btn btn-primary']) !!}
+    <a href="{!! route('manager_staff.index') !!}" class="btn btn-default">{{ trans('auth.cancel') }}</a>
 </div>
+

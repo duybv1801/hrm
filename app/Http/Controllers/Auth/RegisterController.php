@@ -58,7 +58,6 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
-       
     }
 
     /**
@@ -70,9 +69,8 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $otp = Str::random(6);
-        
         Mail::to($data['email'])->send(new VerifyEmail($otp));
-        
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -80,5 +78,4 @@ class RegisterController extends Controller
             'otp' => $otp,
         ]);
     }
- 
 }
