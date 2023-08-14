@@ -29,7 +29,7 @@ class ManagerStaffController extends AppBaseController
     {
         $users = $this->userRepository->all();
 
-        return view('managerStaff.index')->with('users', $users); 
+        return view('manager_staff.index')->with('users', $users); 
     }
    
     /**
@@ -45,10 +45,10 @@ class ManagerStaffController extends AppBaseController
         if (empty($user)) {
             Flash::error('Staff not found');
 
-            return redirect(route('managerStaff.index'));
+            return redirect(route('manager_staff.index'));
         }
 
-        return view('managerStaff.show')->with('user', $user);
+        return view('manager_staff.show')->with('user', $user);
     }
 
     /**
@@ -64,10 +64,10 @@ class ManagerStaffController extends AppBaseController
         if (empty($user)) {
             Flash::error('Staff not found');
 
-            return redirect(route('managerStaff.index'));
+            return redirect(route('manager_staff.index'));
         }
 
-        return view('managerStaff.edit')->with('user', $user);
+        return view('manager_staff.edit')->with('user', $user);
     }
 
     /**
@@ -84,7 +84,7 @@ class ManagerStaffController extends AppBaseController
         if (empty($user)) {
             Flash::error('Staff not found');
 
-            return redirect(route('managerStaff.index'));
+            return redirect(route('manager_staff.index'));
         }
         $input =  $request->all();
         if (!empty($input['password'])) {
@@ -96,7 +96,7 @@ class ManagerStaffController extends AppBaseController
 
         Flash::success('Staff updated successfully.');
  
-        return redirect(route('managerStaff.index'));
+        return redirect(route('manager_staff.index'));
     }
 
     /**
