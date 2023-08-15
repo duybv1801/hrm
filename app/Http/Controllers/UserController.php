@@ -128,7 +128,7 @@ class UserController extends AppBaseController
         }
         $user = $this->userRepository->update($input, $id);
 
-        Flash::success('User updated successfully.');
+        Flash::success(trans('validation.crud.updated'));
 
         return redirect(route('users.index'));
     }
@@ -154,7 +154,7 @@ class UserController extends AppBaseController
 
         $this->userRepository->delete($id);
 
-        Flash::success('User deleted successfully.');
+        Flash::success(trans('validation.crud.delete'));
 
         return redirect(route('users.index'));
     }

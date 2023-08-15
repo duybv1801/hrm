@@ -25,5 +25,5 @@ return [
     'account_manager' => 'Tài khoản',
     'account_show'  => 'Thông tin tài khoản',
     'account_edit' => 'Sửa thông tin tài khoản',
-    'password' => 'Nhập mật khẩu'
+    'settings' => 'Cài đặt',
 ];

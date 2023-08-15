@@ -16,6 +16,8 @@ class AddOtpToUsers extends Migration
 
         Schema::table('users', function (Blueprint $table) {
             $table->string('otp')->nullable();
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
         });
     }
 
@@ -28,6 +30,8 @@ class AddOtpToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('otp');
+            $table->dropColumn('first_ame');
+            $table->dropColumn('last_name');
         });
     }
 }

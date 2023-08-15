@@ -12,7 +12,7 @@
                             @foreach ($users as $user) 
                                 <tr>
                                     <td> {{ ++$i }}</td>
-                                    <td> {{ Form::label('name', trans('staff.name')) }}
+                                    <td> {{ Form::label('name', trans('staff.name.name')) }}
                                         <p>{!! $user->name !!}</p>
                                     </td>
                                     <td>{{ Form::label('email', trans('staff.email')) }} <p>{!! $user->email !!}</p>

@@ -11,14 +11,14 @@
                             @foreach ($users as $user) 
                                 <tr>
                                     <td> {{ ++$i }}</td>
-                                    <td> {{ Form::label('name', trans('staff.name')) }}
+                                    <td> {{ Form::label('name', trans('staff.name.name')) }}
                                         <p>{!! $user->name !!}</p>
                                     </td>
                                     <td>{{ Form::label('email', trans('staff.email')) }} <p>{!! $user->email !!}</p>
                                     </td>
                                     <td> {{ Form::label('code', trans('staff.code')) }} <p>{!! $user->code !!}</p>
                                     </td>
-                                    <td>{{ Form::label('gender', trans('staff.gender')) }} <p>{!! $user->gender !!}</p>
+                                    <td>{{ Form::label('gender', trans('staff.genders.name')) }} <p>{!! $user->gender !!}</p>
                                     </td>
                                     <td>{{ Form::label('birthday', trans('staff.birthday')) }} <p>{!! $user->birthday !!}
                                         </p>

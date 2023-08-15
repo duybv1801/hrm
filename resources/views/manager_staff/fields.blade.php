@@ -1,108 +1,119 @@
-<!-- Name Field -->
-<div class="form-group col-sm-6">
-    <label for="name">{{ trans('staff.name') }}</label>
+<!-- Username Field -->
+<div class="form-group">
+    <label for="name">{{ trans('staff.name.name') }}</label>
     <input type="name" name="name" id="name" class="form-control" value="{{ $user->name }}" />
 </div>
 
+<!-- First name Field -->
+<div class="form-group">
+    <label for="name">{{ trans('staff.name.first_name') }}</label>
+    <input type="name" name="first_name" id="first_name" class="form-control" value="{{ $user->first_name }}" />
+</div>
+
+<!-- Last name Field -->
+<div class="form-group">
+    <label for="name">{{ trans('staff.name.last_name') }}</label>
+    <input type="name" name="last_name" id="last_name" class="form-control" value="{{ $user->last_name }}" />
+</div>
+
 <!-- Email Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     <label for="email">{{ trans('staff.email') }}</label>
     <input type="email" name="email" id="email" class="form-control" value="{{ $user->email }}" />
 </div>
 
 <!-- Code Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     <label for="code">{{ trans('staff.code') }}</label>
     <input type="text" name="code" id="code" class="form-control" value="{{ $user->code }}" />
 </div>
 
 <!-- Start Date Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     <label for="start_date">{{ trans('staff.start_date') }}</label>
-    <input type="text" name="start_date" id="start_date" class="form-control" value="{{ $user->start_date }}" />
+    <input type="date" name="start_date" id="start_date" class="form-control" value="{{ $user->start_date }}" />
 </div>
 
 <!-- Official Start Date Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     <label for="official_start_date">{{ trans('staff.official_start_date') }}</label>
-    <input type="text" name="official_start_date" id="official_start_date" class="form-control"
+    <input type="date" name="official_start_date" id="official_start_date" class="form-control"
         value="{{ $user->official_start_date }}" />
 </div>
 
 <!-- Gender Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     <label for="gender">{{ trans('staff.gender') }}</label>
-    <input type="text" name="gender" id="gender" class="form-control" value="{{ $user->gender }}" />
+    <select name="gender" id="gender" class="form-control">
+        <option value="1" {{ $user->gender == 1 ? 'selected' : '' }}>{{ trans('staff.genders.male') }}</option>
+        <option value="2" {{ $user->gender == 2 ? 'selected' : '' }}>{{ trans('staff.genders.female') }}</option>   
+    </select>
 </div>
 
 <!-- Dependent Person Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     <label for="dependent_person">{{ trans('staff.dependent_person') }}</label>
     <input type="text" name="dependent_person" id="dependent_person" class="form-control"
-        value="{{ $user->dependent_person }}" />
+        value="{{ $user->dependent_person }}" readonly />
 </div>
 
 <!-- Contract Field -->
-<div class="form-group col-sm-6">
-    <label for="contract">{{ trans('staff.contract') }}</label>
-    <input type="text" name="contract" id="contract" class="form-control" value="{{ $user->contract }}" />
+<div class="form-group">
+    <label for="contract">{{ trans('staff.contract.name') }}</label>
+    <select name="contract" id="contract" class="form-control">
+        <option value="1" {{ $user->contract == 1 ? 'selected' : '' }}>{{ trans('staff.contract.fresher') }}</option>
+        <option value="2" {{ $user->contract == 2 ? 'selected' : '' }}>{{ trans('staff.contract.staff') }}</option>
+        <option value="3" {{ $user->contract == 3 ? 'selected' : '' }}>{{ trans('staff.contract.intern') }}</option>
+    </select>
 </div>
 
 <!-- Birthday Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     <label for="birthday">{{ trans('staff.birthday') }}</label>
-    <input type="text" name="birthday" id="birthday" class="form-control" value="{{ $user->birthday }}" />
+    <input type="date" name="birthday" id="birthday" class="form-control" value="{{ $user->birthday }}" />
 </div>
 
 <!-- Phone Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     <label for="phone">{{ trans('staff.phone') }}</label>
-    <input type="text" name="phone" id="phone" class="form-control" value="{{ $user->phone }}" />
+    <input type="number" name="phone" id="phone" class="form-control" value="{{ $user->phone }}" />
 </div>
 
 <!-- Status Field -->
-<div class="form-group col-sm-6">
-    <label for="status">{{ trans('staff.status') }}</label>
-    <input type="text" name="status" id="status" class="form-control" value="{{ $user->status }}" />
+<div class="form-group">
+    <label for="status">{{ trans('staff.status.name') }}</label>
+    <select name="status" id="status" class="form-control">
+        <option value="1" {{ $user->status == 1 ? 'selected' : '' }}>{{ trans('staff.status.active') }}</option>
+        <option value="2" {{ $user->status == 2 ? 'selected' : '' }}>{{ trans('staff.status.inactive') }}</option>   
+    </select>
 </div>
 
 <!-- Position Field -->
-<div class="form-group col-sm-6">
-    <label for="position">{{ trans('staff.position') }}</label>
-    <input type="text" name="position" id="position" class="form-control" value="{{ $user->position }}" />
-</div>
-
-<!-- User ID Field -->
-<div class="form-group col-sm-6">
-    <label for="user_id">{{ trans('staff.user_id') }}</label>
-    <input type="text" name="user_id" id="user_id" class="form-control" value="{{ $user->user_id }}" />
+<div class="form-group">
+    <label for="position">{{ trans('staff.position.name') }}</label>
+    <select name="contract" id="contract" class="form-control">
+        <option value="1" {{ $user->contract == 1 ? 'selected' : '' }}>{{ trans('staff.position.1') }}</option>
+        <option value="2" {{ $user->contract == 2 ? 'selected' : '' }}>{{ trans('staff.position.2') }}</option>
+        <option value="3" {{ $user->contract == 3 ? 'selected' : '' }}>{{ trans('staff.position.3') }}</option>
+        <option value="4" {{ $user->contract == 3 ? 'selected' : '' }}>{{ trans('staff.position.4') }}</option>
+    </select>
 </div>
 
 <!-- Avatar Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     <label for="avatar">{{ trans('staff.avatar') }}</label>
     <input type="text" name="avatar" id="avatar" class="form-control" value="{{ $user->avatar }}" />
 </div>
 
 <!-- Role Field -->
-<div class="form-group col-sm-6">
-    <label for="role">{{ trans('staff.role') }}</label>
-    <input type="text" name="role" id="role" class="form-control" value="{{ $user->role }}" />
-</div>
-
-
-<!-- Leave Hours Left Field -->
-<div class="form-group col-sm-6">
-    <label for="role">{{ trans('staff.leave_hours_left') }}</label>
-    <input type="text" name="leave_hours_left" id="leave_hours_left" class="form-control"
-        value="{{ $user->leave_hours_left }}" />
-</div>
-
-<!-- Leave Hours Left in Month Field -->
-<div class="form-group col-sm-6">
-    <label for="role">{{ trans('staff.leave_hours_left_in_month') }}</label>
-    <input type="text" name="leave_hours_left" id="leave_hours_left" class="form-control"
-        value="{{ $user->leave_hours_left_in_month }}" />
+<div class="form-group">
+    <label for="role">{{ trans('staff.role.name') }}</label>
+    <select name="role" id="role" class="form-control">
+        <option value="1" {{ $user->contract == 1 ? 'selected' : '' }}>{{ trans('staff.role.1') }}</option>
+        <option value="2" {{ $user->contract == 2 ? 'selected' : '' }}>{{ trans('staff.role.2') }}</option>
+        <option value="3" {{ $user->contract == 3 ? 'selected' : '' }}>{{ trans('staff.role.3') }}</option>
+        <option value="4" {{ $user->contract == 3 ? 'selected' : '' }}>{{ trans('staff.role.4') }}</option>
+    </select>
 </div>
 
 <!-- Submit Field -->
