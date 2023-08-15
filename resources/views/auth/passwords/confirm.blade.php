@@ -39,7 +39,7 @@
 
     <div class="card">
         <div class="card-body login-card-body">
-            <p class="login-box-msg">Please confirm your password before continuing.</p>
+            <p class="login-box-msg">Please confirm your password before continuing./đây là confirm.balde nhé</p>
 
             <form method="POST" action="{{ route('password.confirm') }}">
                 @csrf

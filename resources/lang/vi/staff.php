@@ -14,20 +14,49 @@
 return [  
     'staff_edit' => 'Sửa thông tin nhân viên',
     'email' => 'Email',
-    'name' => 'Tên',
     'code' => 'Mã nhân viên',
     'start_date' => 'Ngày bắt đầu',
     'official_start_date' => 'Ngày bắt đầu tại cơ quan',
-    'gender' => 'Giới tính',
     'dependent_person' => 'Người phụ thuộc',
-    'contract' => 'Hợp đồng',
+    'name' => [
+        'name' => 'Tên người dùng',
+        'first_name' => 'Tên',
+        'last_name' => 'Tên đệm',
+    ],
+    'contract' => [
+        'name' => 'Loại Hợp đồng',
+        'fresher' => 'Thử việc',
+        'intern' => 'Thực tập',
+        'staff' => 'Chính thức',
+    ],
+    'genders' => [
+        'name' => 'Giới tính',
+        'male' => 'Nam',
+        'female' => 'Nữ',
+    ],
+    'status' =>[
+        'name' => 'Trạng thái',
+        'active' => 'Hoạt động',
+        'inactive' => 'Nghỉ việc'
+    ],
+    'position' => [
+        'name' => 'Chức vụ',
+        '1' => 'Nhân viên',
+        '2' => 'PO',
+        '3' => 'TT Lead',
+        '4' => 'Culi'
+    ],
+    'role' => [
+        'name' => 'Quyền',
+        '1' => 'member',
+        '2' => 'hr',
+        '3' => 'accounter',
+        '4' => 'admin'
+    ],
     'birthday' => 'Sinh nhật',
     'phone' => 'SĐT',
-    'status' => 'Trạng thái',
-    'position' => 'Chức vụ',
     'user_id' => 'Người tạo',
     'avatar' => 'Ảnh đại diện',
-    'role' => 'Vai trò',
     'leave_hours_left' => 'Thời gian nghỉ không đúng qui định',
     'leave_hours_left_in_month' => 'Thời gian nghỉ không đúng qui định/tháng',
 ];

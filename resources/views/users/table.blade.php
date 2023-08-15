@@ -1,21 +1,28 @@
-
 <div class="row">
     <!-- column -->
     <div class="col-sm-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Table</h4>
                 <div class="table-responsive">
-                    <table class="table user-table">  
-                        <tbody> 
+                    <table class="table user-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>{{ Form::label('name', trans('staff.name.name')) }}</th>
+                                <th>{{ Form::label('email', trans('staff.email')) }}</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
                             <?php $i = 0; ?>
-                            @foreach ($users as $user) 
+                            @foreach ($users as $user)
                                 <tr>
                                     <td> {{ ++$i }}</td>
-                                    <td> {{ Form::label('name', trans('staff.name')) }}
+                                    <td>
                                         <p>{!! $user->name !!}</p>
                                     </td>
-                                    <td>{{ Form::label('email', trans('staff.email')) }} <p>{!! $user->email !!}</p>
+                                    <td>
+                                        <p>{!! $user->email !!}</p>
                                     </td>
                                     <td>
                                         {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'delete']) !!}
@@ -23,8 +30,8 @@
                                             <a href="{!! route('users.edit', [$user->id]) !!}" class="btn btn-primary btn-sm">
                                                 <i class="glyphicon glyphicon-edit"></i>{{ trans('auth.edit') }}
                                             </a>
-                                            {!! Form::button('<i class="glyphicon glyphicon-trash"></i>'.trans('auth.delete') , [
-                                                'type' => 'submit', 
+                                            {!! Form::button('<i class="glyphicon glyphicon-trash"></i>' . trans('auth.delete'), [
+                                                'type' => 'submit',
                                                 'class' => 'btn btn-danger btn-sm',
                                                 'onclick' => "return confirm('Bạn có chắc chắn muốn xóa?')",
                                             ]) !!}
@@ -40,4 +47,3 @@
         </div>
     </div>
 </div>
-

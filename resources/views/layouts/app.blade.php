@@ -105,7 +105,7 @@
                         <!-- item-->
                         <a href="" class="link" data-toggle="tooltip"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                            title="Log" data-original-title="Logout"><i class="fas fa-sign-out-alt"></i>{{ trans('validation.sign_out') }}</a>
+                            title="Log" data-original-title="Logout"><i class="fas fa-sign-out-alt"></i>{{ trans('passwords.sign_out') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>

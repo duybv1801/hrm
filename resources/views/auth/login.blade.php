@@ -45,7 +45,7 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">
-                    {{ trans('validation.sign_in') }}
+                    {{ trans('passwords.sign_in') }}
                 </p>
 
                 <form method="post" action="{{ url('/login') }}">
@@ -64,7 +64,7 @@
                     </div>
 
                     <div class="input-group mb-3">
-                        <input type="password" name="password" placeholder=" {{ trans('auth.password') }}"
+                        <input type="password" name="password" placeholder=" {{ trans('passwords.password_input') }}"
                             class="form-control @error('password') is-invalid @enderror">
                         <div class="input-group-append">
                             <div class="input-group-text">
@@ -81,24 +81,24 @@
                         <div class="col-8">
                             <div class="icheck-primary">
                                 <input type="checkbox" id="remember">
-                                <label for="remember">{{ trans('validation.remember_me') }}</label>
+                                <label for="remember">{{ trans('passwords.remember_me') }}</label>
                             </div>
                         </div>
 
                         <div class="col-4">
                             <button type="submit" class="btn btn-primary btn-block">
-                                {{ trans('validation.sign_in') }}</button>
+                                {{ trans('passwords.sign_in') }}</button>
                         </div>
 
                     </div>
                 </form>
 
                 <p class="mb-1">
-                    <a href="{{ route('password.request') }}">{{ trans('validation.forgot_password') }}</a>
+                    <a href="{{ route('password.request') }}">{{ trans('passwords.login.forgot_password') }}</a>
                 </p>
                 <p class="mb-0">
                     <a href="{{ route('register') }}"
-                        class="text-center">{{ trans('validation.register_membership') }}</a>
+                        class="text-center">{{ trans('passwords.login.register_membership') }}</a>
                 </p>
             </div>
             <!-- /.login-card-body -->

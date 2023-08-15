@@ -13,4 +13,5 @@
             aria-expanded="false"><i class="mdi me-2 mdi-table"></i><span class="hide-menu">{{ trans('auth.manager_staff') }}</span></a>
     </li>
 
+</li>
 </ul>

@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ManagerStaffController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InOutForgetController;
+use App\Http\Controllers\LeaveController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 
 
 /*
@@ -32,3 +35,12 @@ Route::resource('users', UserController::class)->middleware('auth');
 //manager staff
 Route::resource('manager_staff',ManagerStaffController::class)->middleware('auth');
 
+//in out forgets
+Route::resource('in_out_forgets', InOutForgetController::class)->middleware('auth');
+
+//leaves
+Route::resource('leaves', LeaveController::class)->middleware('auth');
+
+//password mail
+Route::get('/reset-password/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('/reset-password', [ResetPasswordController::class, 'reset'])->name('password.update');

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\UpdateStaffRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Repositories\UserRepository;
 use App\Http\Controllers\AppBaseController;
@@ -58,7 +58,7 @@ class ManagerStaffController extends AppBaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id, UpdateUserRequest $request)
+    public function update($id, UpdateStaffRequest $request)
     {
         $user = $this->userRepository->find($id);
 
@@ -68,14 +68,8 @@ class ManagerStaffController extends AppBaseController
             return redirect(route('manager_staff.index'));
         }
         $input =  $request->all();
-        if (!empty($input['password'])) {
-            $input['password'] = Hash::make($input['password']);
-        } else {
-            unset($input['password']);
-        }
         $user = $this->userRepository->update($input, $id);
-
-        Flash::success('Staff updated successfully.');
+        Flash::success(trans('validation.crud.updated'));
  
         return redirect(route('manager_staff.index'));
     }
@@ -98,7 +92,7 @@ class ManagerStaffController extends AppBaseController
 
         $this->userRepository->delete($id);
 
-        Flash::success('Staff deleted successfully.');
+        Flash::success(trans('validation.crud.delete'));
 
         return redirect(route('manager_staff.index'));
     }
