@@ -132,7 +132,7 @@
         </aside>
 
         <div class="page-wrapper">
-            <div class="page-breadcrumb">
+            {{-- <div class="page-breadcrumb">
                 <div class="row align-items-center">
                     <div class="col-md-6 col-8 align-self-center">
                         <h3 class="page-title mb-0 p-0">{{ trans('auth.nal_lg') }}</h3>
@@ -146,7 +146,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div> --}}
             <div class="container-fluid">
                 <div class="row">
                     @yield('content')
