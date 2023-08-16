@@ -12,18 +12,5 @@
 */
 
 return [
-    'cancel' => 'Hủy',
-    'save' => 'Lưu',
-    'create' => 'Thêm',
-    'edit' => 'Sửa',
-    'delete' => 'Xóa',
-    'search' => 'Tìm kiếm',
-    'nal'   => 'https://nal.vn/vi/',
-    'home'  => 'Trang chủ',
-    'nal_lg' => 'NAL-COMPANY',
-    'vertical' => 'Xác thực mail',
-    'manager_staff' => 'Quản lí nhân viên',
-    'account_manager' => 'Tài khoản',
-    'account_show'  => 'Thông tin tài khoản',
-    'account_edit' => 'Sửa thông tin tài khoản',
+
 ];

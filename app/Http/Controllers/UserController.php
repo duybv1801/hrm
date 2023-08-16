@@ -147,7 +147,7 @@ class UserController extends AppBaseController
         $user = $this->userRepository->find($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error(trans('validation.crud.show_error'));
 
             return redirect(route('users.index'));
         }

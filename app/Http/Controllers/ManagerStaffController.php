@@ -43,7 +43,7 @@ class ManagerStaffController extends AppBaseController
         $user = $this->userRepository->find($id);
 
         if (empty($user)) {
-            Flash::error('Staff not found');
+            Flash::error(trans('validation.crud.show_error'));
 
             return redirect(route('manager_staff.index'));
         }

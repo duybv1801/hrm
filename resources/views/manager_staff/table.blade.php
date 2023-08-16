@@ -48,12 +48,12 @@
                                         {!! Form::open(['route' => ['manager_staff.destroy', $user->id], 'method' => 'delete']) !!}
                                         <div class="btn-group">
                                             <a href="{!! route('manager_staff.edit', [$user->id]) !!}" class="btn btn-primary btn-sm">
-                                                <i class="glyphicon glyphicon-edit"></i>{{ trans('auth.edit') }}
+                                                <i class="glyphicon glyphicon-edit"></i>{{ trans('edit') }}
                                             </a>
-                                            {!! Form::button('<i class="glyphicon glyphicon-trash"></i>' . trans('auth.delete'), [
+                                            {!! Form::button('<i class="glyphicon glyphicon-trash"></i>' . trans('delete'), [
                                                 'type' => 'submit',
                                                 'class' => 'btn btn-danger btn-sm',
-                                                'onclick' => "return confirm('Bạn có chắc chắn muốn xóa?')",
+                                                'onclick' =>  "if(!confirm('".trans('alert delete')."')){return false;}",
                                             ]) !!}
                                         </div>
                                         {!! Form::close() !!}

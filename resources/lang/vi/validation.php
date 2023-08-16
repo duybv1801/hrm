@@ -16,6 +16,7 @@ return [
         'created' => 'Thêm mới thành công !',
         'updated' => 'Cập nhật thành công !',
         'delete' => 'Xóa thành công !',
+        'show_error' => 'Không tìm thấy thông tin'
     ],
 
     'accepted'             => 'Trường :attribute phải được chấp nhận.',

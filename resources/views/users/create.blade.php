@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            {{ trans('auth.account_manager') }}
+            {{ trans('account manager') }}
         </h1>
     </section>
     <div class="content">

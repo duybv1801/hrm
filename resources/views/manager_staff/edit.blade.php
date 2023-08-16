@@ -9,14 +9,10 @@
     <div class="content">
         @include('adminlte-templates::common.errors')
         <div class="box box-primary">
-            <div class="box-body">
-                <div class="row">
-                    <div class="col-md-12">
+            <div class="box-body">                
                         {!! Form::model($user, ['route' => ['manager_staff.update', $user->id], 'method' => 'patch']) !!}
                             @include('manager_staff.fields')
                         {!! Form::close() !!}
-                    </div>
-                </div>
             </div>
         </div>
     </div>
