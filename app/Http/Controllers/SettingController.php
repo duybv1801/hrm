@@ -18,8 +18,7 @@ class SettingController extends Controller
     public function index()
     {
         $settings = $this->settingService->getAllSettings();
-        $keyLabels = trans('setting');
-        return view('setting.setting', compact('settings', 'keyLabels'));
+        return view('setting.setting', compact('settings'));
     }
 
     public function update(UpdateSettingRequest $request)
