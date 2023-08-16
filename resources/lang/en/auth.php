@@ -12,7 +12,7 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
+    'save' => 'Save',
     'failed' => 'These credentials do not match our records.',
     'password' => 'The provided password is incorrect.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
@@ -23,6 +23,6 @@ return [
         'forgot_password' => 'Forgot password',
         'register_membership' => 'Register membership',
         'title' => 'Login'
-    ]
-
+    ],
+    'settings' => 'Settings',
 ];

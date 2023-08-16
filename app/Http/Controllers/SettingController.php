@@ -26,6 +26,6 @@ class SettingController extends Controller
         $data = $request->except('_token');
         $this->settingService->updateSettings($data);
 
-        return redirect()->route('settings.index')->with('success', 'Cập nhật thành công');
+        return redirect()->route('settings.index');
     }
 }
