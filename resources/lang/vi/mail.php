@@ -13,6 +13,7 @@
 
 return [
     'name' => 'Email',
+    'mail-auth' => 'Mã xác thực email',
     'mail_ths' => 'Chân thành cảm ơn bạn <3',
     'mail_clp' => 'Bạn đã đăng kí thành công !',
     'mail_alert' => 'Mã đã được gửi đến địa chỉ Email của bạn',
