@@ -20,7 +20,6 @@
             {!! Form::model(['route' => ['settings.update'], 'method' => 'post']) !!}
             @include('setting.fields')
             {!! Form::close() !!}
-
         </div>
     </div>
 

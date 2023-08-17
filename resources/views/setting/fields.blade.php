@@ -169,6 +169,7 @@
             </div>
         </div>
     </div>
+
     <div class="col-md-5">
         <!-- ot_night_time_start -->
         <div class="form-group row">
@@ -321,6 +322,7 @@
         </div>
     </div>
 </div>
+
 <div class="form-group row">
     <div class="col-sm-12">
         <input type="submit" class="btn btn-primary" value="{{ trans('auth.save') }}" id="submit-button">
