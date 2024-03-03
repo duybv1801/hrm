@@ -11,7 +11,7 @@
 |
 */
 
-return [  
+return [
     'staff_edit' => 'Sửa thông tin nhân viên',
     'email' => 'Email',
     'code' => 'Mã nhân viên',
@@ -34,7 +34,7 @@ return [
         'male' => 'Nam',
         'female' => 'Nữ',
     ],
-    'status' =>[
+    'status' => [
         'name' => 'Trạng thái',
         'active' => 'Hoạt động',
         'inactive' => 'Nghỉ việc'
@@ -59,4 +59,5 @@ return [
     'avatar' => 'Ảnh đại diện',
     'leave_hours_left' => 'Thời gian nghỉ không đúng qui định',
     'leave_hours_left_in_month' => 'Thời gian nghỉ không đúng qui định/tháng',
+    'action' => 'Hành động',
 ];

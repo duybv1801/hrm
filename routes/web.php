@@ -7,7 +7,9 @@ use App\Http\Controllers\ManagerStaffController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InOutForgetController;
 use App\Http\Controllers\LeaveController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\SettingController;
+
 
 
 /*
@@ -47,3 +49,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
     Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
 });
+//password mail
+Route::get('/reset-password/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('/reset-password', [ResetPasswordController::class, 'reset'])->name('password.update');

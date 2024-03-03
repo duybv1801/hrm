@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\UpdateStaffRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Repositories\UserRepository;
 use App\Http\Controllers\AppBaseController;
@@ -43,7 +43,7 @@ class ManagerStaffController extends AppBaseController
         $user = $this->userRepository->find($id);
 
         if (empty($user)) {
-            Flash::error('Staff not found');
+            Flash::error(trans('validation.crud.show_error'));
 
             return redirect(route('manager_staff.index'));
         }
@@ -58,7 +58,7 @@ class ManagerStaffController extends AppBaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id, UpdateUserRequest $request)
+    public function update($id, UpdateStaffRequest $request)
     {
         $user = $this->userRepository->find($id);
 

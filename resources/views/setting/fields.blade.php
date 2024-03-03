@@ -325,6 +325,6 @@
 
 <div class="form-group row">
     <div class="col-sm-12">
-        <input type="submit" class="btn btn-primary" value="{{ trans('auth.save') }}" id="submit-button">
+        <input type="submit" class="btn btn-primary" value="{{ trans('save') }}" id="submit-button">
     </div>
 </div>

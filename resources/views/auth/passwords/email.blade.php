@@ -41,7 +41,7 @@
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">
-              @lang('auth.forgot_password.title')
+                {{ trans('passwords.password_down') }}
             </p>
 
             @if (session('status'))
@@ -70,17 +70,18 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block">@lang('auth.forgot_password.send_pwd_reset')</button>
+                        <button type="submit" class="btn btn-primary btn-block">  {{ trans('passwords.password_down') }}</button>
                     </div>
                     <!-- /.col -->
                 </div>
             </form>
 
             <p class="mt-3 mb-1">
-                <a href="{{ route("login") }}">@lang('auth.sign_in')</a>
+                <a href="{{ route("login") }}">{{ trans('passwords.sign_in') }}</a>
             </p>
             <p class="mb-0">
-                <a href="{{ route("register") }}" class="text-center">@lang('auth.login.register_membership')</a>
+                <a href="{{ route('register') }}"
+                    class="text-center">{{ trans('passwords.login.register_membership') }}</a>
             </p>
         </div>
         <!-- /.login-card-body -->

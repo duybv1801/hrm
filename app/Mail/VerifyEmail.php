@@ -12,17 +12,19 @@ class VerifyEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $otp;
+    public $verificationUrl;
+
+    public function __construct($verificationUrl)
+    {
+        $this->verificationUrl = $verificationUrl;
+    }
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($otp)
-    {
-        $this->otp = $otp;
-    }
+   
 
     /**
      * Build the message.
@@ -31,7 +33,7 @@ class VerifyEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.otp', ['otp' => $this->otp])
-        ->subject('Mã xác thực OTP');
+        return $this->view('mail.otp', ['email' => $this->verificationUrl])
+        ->subject(trans('mail.mail_auth'));
     }
 }

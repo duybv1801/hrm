@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="content-header">
-        <h1 style="font-size: 3rem">
+        <h1>
             {{ trans('setting.setting') }}
         </h1>
     </section>

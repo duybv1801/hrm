@@ -33,9 +33,7 @@
                         <td style="padding:36px 30px 42px 30px;">
                             <table role="presentation"
                                 style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
-
                                 @yield('email')
-
                                 <tr>
                                     <td style="padding:0;">
                                         <table role="presentation"
@@ -48,7 +46,6 @@
                                                             alt="" width="260"
                                                             style="height:auto;display:block;" />
                                                     </p>
-
                                                     <p
                                                         style="margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
                                                         <a href="http://www.example.com"
@@ -63,7 +60,6 @@
                                                             alt="" width="260"
                                                             style="height:auto;display:block;" />
                                                     </p>
-
                                                     <p
                                                         style="margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
                                                         <a href="http://www.example.com"
@@ -85,8 +81,8 @@
                                     <td style="padding:0;width:50%;" align="left">
                                         <p
                                             style="margin:0;font-size:14px;line-height:16px;font-family:Arial,sans-serif;color:#ffffff;">
-                                            &reg; Someone, Somewhere 2021<br /><a href="http://www.example.com"
-                                                style="color:#ffffff;text-decoration:underline;">Unsubscribe</a>
+                                            &reg;{{ trans('mail.mail_clp') }}<br /><a href="http://www.example.com"
+                                                style="color:#ffffff;text-decoration:underline;">{{ trans('mail.mail_clp') }}</a>
                                         </p>
                                     </td>
                                     <td style="padding:0;width:50%;" align="right">
